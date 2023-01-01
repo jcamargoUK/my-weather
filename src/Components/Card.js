@@ -35,11 +35,13 @@ const Card = () => {
   
   }, [input])
 
-  function handleInput(e) {
+  const handleInput = (e) => {
     setInput(e.target.value)
   }
 
   return (
+    <>
+    <input type="text" onChange={handleInput} />
     <div className="card">
       <div className="card__header">
         <h1 className="card__title">{city}</h1>
@@ -79,6 +81,7 @@ const Card = () => {
         </div>
       </div>
     </div>
+    </>
   )
   
 
